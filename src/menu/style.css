@@ -1,0 +1,142 @@
+:root {
+  --speed: 0.75s;
+  font-size: 16pt;
+}
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+ /* background: var(--primary-color);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  flex: none;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--speed);
+}
+.menu-wrap .menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.menu-wrap .menu > div {
+  width: 30vw;
+  height: 100vh;
+  background-color: var(--overlay-color);
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: translate(30vw, 0vh);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1250px) {
+  .menu-wrap .menu > div {
+    background: rgba(116, 116, 116, 0.9);
+    width: 100vw;
+    transform: translate(100vw, 0vh);
+    transition: all 2s ease;
+  }
+}

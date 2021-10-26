@@ -1,5 +1,15 @@
+:root {
+  --swiper-theme-color: white;
+  --primary-color: #0C0B22;
+  --secondary-color:#05CAD0;
+  --overlay-color: #deecf9;
+}
+
+
 .App {
   text-align: center;
+  background-color: #0C0B22;
+
 }
 
 .App-logo {
@@ -9,12 +19,11 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+   /* animation: App-logo-spin infinite 60s linear;*/
   }
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +33,21 @@
   color: white;
 }
 
+.swiper-button-disabled{
+  display: none;
+}
+
 .App-link {
-  color: #61dafb;
+  color: var(--swiper-theme-color) !important;
+  animation: fade 2s infinite;
+}
+.App-link:hover{
+  background-color: transparent;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,12 @@
+.mySwiper {
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
+  
+  .mySwiper > .swiper-wrapper {
+    align-self: center;
+    height: fit-content;
+  }
+  
