@@ -1,16 +1,13 @@
 :root {
   --swiper-theme-color: white;
-  --primary-color: #0C0B22;
-  --secondary-color:#05CAD0;
+  --primary-color: #0c0b22;
+  --secondary-color: #05cad0;
   --overlay-color: #deecf9;
 }
 
-
-
 .App {
   text-align: center;
-  background-color: #0C0B22;
-
+  background-color: #0c0b22;
 }
 
 .App-logo {
@@ -20,7 +17,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-   /* animation: App-logo-spin infinite 60s linear;*/
+    /* animation: App-logo-spin infinite 60s linear;*/
   }
 }
 
@@ -34,7 +31,7 @@
   color: white;
 }
 
-.swiper-button-disabled{
+.swiper-button-disabled {
   display: none;
 }
 
@@ -42,13 +39,18 @@
   color: var(--swiper-theme-color) !important;
   animation: fade 2s infinite;
 }
-.App-link:hover{
+.App-link:hover {
   background-color: transparent;
 }
 
 @keyframes fade {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -58,4 +60,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+  .App-logo {
+    margin-top: 0px;
+    height: 30vmin;
+    padding: 0;
+  }
+
+  .App-header > {
+    margin-top: 0px;
+  }
+  .App-header > h2 {
+    margin-top: 0px;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
 }
