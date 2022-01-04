@@ -20,6 +20,7 @@ import "./App.css";
 import HorizontalSwiper from "./swipers/horizontal/HorizontalSwiper";
 import AppSlide from "./product/AppSlide";
 import { InduvidualSolution, WebProducts } from "./product/products";
+import { Profile } from "./profile/Profile";
 
 function App() {
   initializeIcons();
@@ -107,6 +108,16 @@ function App() {
                   title="Induvidual Entwicklungen"
                   products={InduvidualSolution}
                 />
+              </SwiperSlide>
+            </HorizontalSwiper>
+          </SwiperSlide>
+          <SwiperSlide virtualIndex={3}>
+            <HorizontalSwiper>
+              <SwiperSlide>
+                <Profile slideTo={slideTo} sliderId={3} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="preferences">test2</div>
               </SwiperSlide>
             </HorizontalSwiper>
           </SwiperSlide>

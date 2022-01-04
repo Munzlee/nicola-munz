@@ -1,0 +1,140 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--overlay-color);
+}
+
+.card > h1 {
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+.profile {
+  height: 100vh;
+  width: 100vw;
+}
+
+.flipCard {
+  background-color: transparent;
+  height: 30vh;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront > h1 {
+  color: var(--primary-color);
+}
+
+/* Style the back side */
+.flipCardBack {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+
+}
+.knowlage {
+  display: flex;
+  height: 80%;
+}
+
+.knowlage div {
+  width: 50%;
+  
+}
+.knowlage div h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.knowlage div ul li {
+  list-style: none;
+}
+
+.links{
+  z-index: 10;
+  height: 10%;
+}
+@media screen and (max-width: 1250px) {
+  .card {
+    max-width: 300px;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flipCard:hover .flipCardInner,
+  .flipCard:active .flipCardInner {
+    transform: rotateY(180deg);
+  }
+
+  .knowlage {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .knowlage div {
+    width: 100%;
+    height: 50%;
+  }
+  .knowlage div h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .knowlage div ul li {
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 1251px) {
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .card:hover .flipCardInner,
+  .card:active .flipCardInner {
+    transform: rotateY(180deg);
+  }
+}

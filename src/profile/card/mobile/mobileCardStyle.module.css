@@ -1,0 +1,216 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  /*  min-height: 80vh;*/
+
+  text-align: center;
+}
+
+.card > h1 {
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 18px;
+}
+
+.card .contact {
+  border: none;
+  outline: 0;
+  display: flex;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.arrow {
+  padding: 0px 20px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: aqua;
+}
+.contactButton {
+  width: 50%;
+}
+.contactButton:hover {
+  background-color: gray;
+}
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+.profile {
+  height: 100vh;
+  width: 100vw;
+}
+
+.flipCard {
+  background-color: var(--overlay-color);
+  min-height: 35vh;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront > h1 {
+  color: var(--primary-color);
+}
+
+/* Style the back side */
+.flipCardBack {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+}
+.knowlage {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.knowlage div {
+  width: 100%;
+}
+.knowlage div h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.knowlage div ul li {
+  list-style: none;
+}
+
+.knowlage div ul {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-inline-start: 0px;
+}
+.links {
+  z-index: 10;
+  width: 50%;
+  align-self: center;
+  border-left: 1px solid black;
+}
+
+@media screen and (max-width: 1250px) {
+  .card {
+    max-width: 300px;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flipCard:hover .flipCardInner,
+  .flipCard:active .flipCardInner {
+    transform: rotateY(180deg);
+  }
+
+  .flipCardBack {
+    font-size: 10pt;
+  }
+
+  .knowlage div {
+    width: 100%;
+    height: 50%;
+  }
+  .knowlage div h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .knowlage div ul li {
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 1251px) {
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .card:hover .flipCardInner,
+  .card:active .flipCardInner {
+    transform: rotateY(180deg);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+  .card {
+    max-width: 90vw;
+    background-color: var(--overlay-color);
+    height: fit-content;
+    min-height: 80vh;
+    margin-bottom: 20vh;
+  }
+  .card > img {
+    border: 1px var(--secondary-color) solid;
+    padding: 10px;
+  }
+
+  .flipCard {
+    height: fit-content;
+    padding: 0;
+  }
+
+  .contact {
+    bottom: 0;
+  }
+  .flipCardBack {
+    font-size: calc(40vh / 16);
+  }
+  .card > img {
+    height: 25%;
+    width: 25% !important;
+  }
+
+  .card h2 {
+    font-size: calc(100% * 0.5);
+  }
+  .card h1 {
+    font-size: calc(100% * 0.5);
+  }
+  .card h3 {
+    font-size: calc(100% * 0.5);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 350px) {
+  .card > img {
+    height: 25%;
+    width: 25% !important;
+  }
+
+  .card {
+    max-width: 98vw;
+  }
+  .flipCardBack {
+    font-size: calc(40vh / 18);
+  }
+}

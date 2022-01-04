@@ -44,6 +44,11 @@
   padding-right: 5px;
 }
 
+@media screen and (min-width: 1251px) {
+  .sizeBig {
+    width: 30vw;
+  }
+}
 @media screen and (max-width: 1250px) {
   .productWrapper {
     flex-direction: column;
