@@ -6,7 +6,7 @@ import "swiper/components/navigation/navigation.min.css";
 import "./HorizontalSwiperStyle.css";
 
 interface IHorizontalSwiperProps {
-  children: React.ReactNodeArray;
+  children: React.ReactNodeArray | React.ReactNode;
 }
 export default function HorizontalSwiper(props: IHorizontalSwiperProps) {
   return (

@@ -116,9 +116,6 @@ function App() {
               <SwiperSlide>
                 <Profile slideTo={slideTo} sliderId={3} />
               </SwiperSlide>
-              <SwiperSlide>
-                <div className="preferences">test2</div>
-              </SwiperSlide>
             </HorizontalSwiper>
           </SwiperSlide>
         </Swiper>
