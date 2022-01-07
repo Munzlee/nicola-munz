@@ -1,0 +1,12 @@
+.impresum {
+  font-size: 1.5vmin;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+@media screen and (max-height: 750px) {
+  .impresum {
+    font-size: 2vmin;
+    overflow: scroll;
+  }
+}

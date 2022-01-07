@@ -21,6 +21,7 @@ import HorizontalSwiper from "./swipers/horizontal/HorizontalSwiper";
 import AppSlide from "./product/AppSlide";
 import { InduvidualSolution, WebProducts } from "./product/products";
 import { Profile } from "./profile/Profile";
+import { Impresum } from "./impresum/Impresum";
 
 function App() {
   initializeIcons();
@@ -117,6 +118,9 @@ function App() {
                 <Profile slideTo={slideTo} sliderId={3} />
               </SwiperSlide>
             </HorizontalSwiper>
+          </SwiperSlide>
+          <SwiperSlide virtualIndex={4}>
+            <Impresum />
           </SwiperSlide>
         </Swiper>
       </div>
