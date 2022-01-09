@@ -6,6 +6,8 @@ import { ITheme, Theme } from "../Theme";
 export interface ICardProps {
   imagePath: string;
   themes: ITheme[];
+  //bigger then 700px
+  isImgBig?: boolean;
 }
 
 const s = require("./mobileCardStyle.module.css");
@@ -61,14 +63,20 @@ export default function MobileCard(props: ICardProps) {
     },
     [isNotFirst, preparedThemes, tab]
   );
+
   return (
     <div className={s.card}>
-      <img src={props.imagePath} alt="Nicola Munz" style={{ width: "100%" }} />
+      <img
+        src={props.imagePath}
+        alt="Nicola Munz"
+        style={props.isImgBig ? { width: "100%" } : undefined}
+      />
       <div className={s.flipCard}>
         <div className={s.flipCardInner}>
           <div className={s.flipCardFront}>
             <h1>Nicola Munz</h1>
             <p className={s.title}>Software Entwickler</p>
+            <Icon className={s.touch} iconName="Touch" />
             <p>Aveniq</p>
           </div>
           <div className={s.flipCardBack}>
@@ -118,7 +126,9 @@ export default function MobileCard(props: ICardProps) {
       </div>
 
       <div className={s.contact}>
-        <div className={s.contactButton}>Contact</div>
+        <div className={s.contactButton}>
+          <a href="mailto:info@nicolamunz.ch">Contact</a>
+        </div>
         <Links className={s.links} />
       </div>
     </div>

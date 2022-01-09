@@ -4,7 +4,7 @@ export function Impresum(props: {}) {
   const s = require("./impresumStyle.module.css");
 
   return (
-    <div  className={s.impresum}>
+    <div className={s.impresum}>
       <p>
         <strong>
           <i>Kontakt-Adresse</i>
@@ -81,7 +81,11 @@ export function Impresum(props: {}) {
       </p>
       <br />
       Quelle:
-      <a href="https://www.swissanwalt.ch" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.swissanwalt.ch"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         SwissAnwalt
       </a>
     </div>

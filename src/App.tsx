@@ -68,7 +68,23 @@ function App() {
               slideTo(2);
             }}
           >
-            Home
+            Angebot
+          </div>
+          <div
+            onClick={() => {
+              setMenuOpen(false);
+              slideTo(3);
+            }}
+          >
+            Nicola Munz
+          </div>
+          <div
+            onClick={() => {
+              setMenuOpen(false);
+              slideTo(4);
+            }}
+          >
+            Impresum
           </div>
         </Menu>
         <Swiper

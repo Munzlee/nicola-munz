@@ -3,10 +3,13 @@
   max-width: 700px;
   margin: auto;
   /*  min-height: 80vh;*/
-
+  background-color: var(--overlay-color);
   text-align: center;
 }
 
+.touch {
+  animation: fade 2s infinite;
+}
 .card > h1 {
   color: var(--primary-color);
 }
@@ -135,6 +138,9 @@ a:hover {
     transform: rotateY(180deg);
   }
 
+  .flipCard:hover .touch {
+    display: none;
+  }
   .flipCardBack {
     font-size: 10pt;
   }
@@ -164,7 +170,6 @@ a:hover {
 @media screen and (orientation: landscape) and (max-height: 650px) {
   .card {
     max-width: 90vw;
-    background-color: var(--overlay-color);
     height: fit-content;
     min-height: 80vh;
     margin-bottom: 20vh;
@@ -212,5 +217,15 @@ a:hover {
   }
   .flipCardBack {
     font-size: calc(40vh / 18);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
