@@ -132,6 +132,9 @@ a:hover {
   .card {
     max-width: 300px;
   }
+  .card > img {
+    width: 100%;
+  }
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flipCard:hover .flipCardInner,
   .flipCard:active .flipCardInner {
