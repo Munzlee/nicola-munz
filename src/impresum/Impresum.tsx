@@ -23,7 +23,7 @@ export function Impresum(props: {}) {
       <p>
         E-Mail:
         <br />
-        nicola.munz@gmail.com
+        info@nicolamunz.ch
       </p>
       <br />
       <p>

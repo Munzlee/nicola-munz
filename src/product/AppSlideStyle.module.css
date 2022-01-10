@@ -126,6 +126,18 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+  .sizeSmall > .productBody {
+    height: fit-content;
+  }
+  .sizeSmall > .productTop {
+    height: fit-content;
+  }
+  .sizeSmall > .productBody > .productBodyBlock {
+    height: fit-content;
+  }
+  .sizeSmall {
+    height: fit-content;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-height: 350px) {

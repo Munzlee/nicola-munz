@@ -25,6 +25,13 @@ import { Impresum } from "./impresum/Impresum";
 
 function App() {
   initializeIcons();
+    if(window.addEventListener) {
+        window.addEventListener("orientationchange", function() {
+            // eslint-disable-next-line no-restricted-globals
+            location.reload();
+        });
+    }
+
 
   SwiperCore.use([Mousewheel, Keyboard, Pagination, Navigation]);
   const [swiperRef, setSwiperRef] = useState<SwiperCore | null>(null);
@@ -88,12 +95,17 @@ function App() {
           </div>
         </Menu>
         <Swiper
+          observer
+          watchOverflow
+          nested
+          initialSlide={0}
           effect="fade"
           onSwiper={setSwiperRef}
           slidesPerView={1}
           keyboard={{
             enabled: true,
           }}
+          watchSlidesProgress
           mousewheel={true}
           navigation
           scrollbar={{ draggable: true }}
