@@ -76,6 +76,9 @@
   .sizeSmall > .productBody {
     width: 50%;
   }
+  .sizeSmall > .productBody > a {
+    font-size: medium;
+  }
   .sizeSmall > .productTop {
     width: 50%;
   }
@@ -121,6 +124,9 @@
     margin-top: 0;
     flex-direction: row;
   }
+  .sizeBig > .productBody {
+    width: 100%;
+  }
 
   .productSlide > h1 {
     margin-top: 0;
@@ -138,6 +144,9 @@
   .sizeSmall {
     height: fit-content;
   }
+  .sizeBig > .productTop {
+    min-width: 165px;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-height: 350px) {
@@ -145,6 +154,9 @@
     font-size: 0.4rem;
     padding: 1%;
     width: 48%;
+  }
+  .sizeBig > .productBody > a {
+    margin-top: -5px;
   }
 
   .product {

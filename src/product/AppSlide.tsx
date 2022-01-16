@@ -65,7 +65,15 @@ export default function AppSlide(props: {
                 </p>
               )}
             </div>
-            <div className={s.productBody}>{createDesc(product.lines)}</div>
+            <div className={s.productBody}>
+              {createDesc(product.lines)}
+              <a
+                style={{ textAlign: "center", width: "100%" }}
+                href={"mailto:info@nicolamunz.ch"}
+              >
+                Mail: info@nicolamunz.ch
+              </a>
+            </div>
           </div>
         ))}
       </div>

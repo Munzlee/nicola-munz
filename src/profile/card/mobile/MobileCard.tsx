@@ -77,7 +77,6 @@ export default function MobileCard(props: ICardProps) {
             <h1>Nicola Munz</h1>
             <p className={s.title}>Software Entwickler</p>
             <Icon className={s.touch} iconName="Touch" />
-            <p>Aveniq</p>
           </div>
           <div className={s.flipCardBack}>
             <div className={s.knowlage}>

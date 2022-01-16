@@ -17,7 +17,7 @@ export const WebProducts: Array<IProduct> = [
     ],
   },
   {
-    title: "Multi Site",
+    title: "Multi Page",
     priceMin: 1900,
     priceMax: 3000,
     priceAltText: "Preis auf Anfrage",
