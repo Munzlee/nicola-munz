@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,10 +26,3 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: YARN TEST
-      # You may pin to the exact commit or the version.
-      # uses: Judahh/yarnTest@7a515be24da855fb44268bde3d85743add0a76c5
-      uses: Judahh/yarnTest@0.0.1
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
