@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import { Curtain } from "./curtain/Curtain";
 import Left from "./pics/Left.png";
 import Right from "./pics/Right.png";
 import logo from "./pics/logo.png";
@@ -22,16 +21,16 @@ import AppSlide from "./product/AppSlide";
 import { InduvidualSolution, WebProducts } from "./product/products";
 import { Profile } from "./profile/Profile";
 import { Impresum } from "./impresum/Impresum";
+import { Curtain } from "react-curtain";
 
 function App() {
   initializeIcons();
-    if(window.addEventListener) {
-        window.addEventListener("orientationchange", function() {
-            // eslint-disable-next-line no-restricted-globals
-            location.reload();
-        });
-    }
-
+  if (window.addEventListener) {
+    window.addEventListener("orientationchange", function () {
+      // eslint-disable-next-line no-restricted-globals
+      location.reload();
+    });
+  }
 
   SwiperCore.use([Mousewheel, Keyboard, Pagination, Navigation]);
   const [swiperRef, setSwiperRef] = useState<SwiperCore | null>(null);
