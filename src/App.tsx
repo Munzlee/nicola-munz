@@ -18,10 +18,11 @@ import "swiper/components/navigation/navigation.min.css";
 import "./App.css";
 import HorizontalSwiper from "./swipers/horizontal/HorizontalSwiper";
 import AppSlide from "./product/AppSlide";
-import { InduvidualSolution, WebProducts } from "./product/products";
+import { WebProducts } from "./product/products";
 import { Profile } from "./profile/Profile";
 import { Impresum } from "./impresum/Impresum";
 import { Curtain } from "react-curtain";
+import { DesignedAppSlide } from "./product/DesignedAppSlide";
 
 function App() {
   initializeIcons();
@@ -129,14 +130,13 @@ function App() {
           <SwiperSlide virtualIndex={2}>
             <HorizontalSwiper>
               <SwiperSlide>
-                <AppSlide title="Weblösung" products={WebProducts} />
+
+                <DesignedAppSlide />
               </SwiperSlide>
               <SwiperSlide>
-                <AppSlide
-                  title="Induvidual Entwicklungen"
-                  products={InduvidualSolution}
-                />
+                <AppSlide title="Weblösung" products={WebProducts} />
               </SwiperSlide>
+
             </HorizontalSwiper>
           </SwiperSlide>
           <SwiperSlide virtualIndex={3}>
